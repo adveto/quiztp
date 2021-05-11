@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style type="text/css">
+    	.btn{
+        background-color: #31c146;
+        border-color: #31c146;
+        
+        font-size: 1.5rem;
+        border-radius: 0.4rem;
+        box-shadow: 0px 0px 8px 0.09px #63ff7a;
+        color: black;
+        width: 90%;
+
+      	}
+
+      	.div28{
+      		width: 28%
+      	}
+
+      	.div26{
+      		width: 26%
+      	}
+
+      	.btn:hover{
+      		background-color: #24702d;
+      		border-color: #24702d;
+      		color: white;
+      	}
+
+      	@media (max-width:550px){
+      		.div28{
+      			width: 100%
+      		}
+
+      		.div26{
+      			width: 100%
+      	}
+      	}
+    </style>
+</head>
+<body style="background-color: #171717;color: white">
+
+	<div class="container">
+		<h1 style="font-size: 4rem;margin-top: 15px;text-align: center;">PROJETO <span style="color:#07c453 ">5X</span></h1>
+	</div>
+	
+	<section id="pergunta">
+	    <div class="container div28" style="text-align: center;">
+	    	
+	    	<h1 id="titu" style="color: #07c453;font-size: 1.65rem;padding-top: 10px">Questão 1 de 4</h1>
+	 
+	    	<p id="txt" style="font-size: 1.6rem;line-height: 1.8rem;font-weight: 400;text-align: center;"> 
+	      	Você ou algum conhecido já investiu pela internet? 
+	      	</p>
+	    
+	    	
+	
+	      	<center>
+	      		<button type="button" style="font-weight: bold" onclick="modifyText(te)" class='btn btn-success' id="bt1">Sim</button>
+	    	</center>
+	    	<center>
+	      		<button type="button" style="margin-top: 20px;font-weight: bold" onclick="modifyText(te)" class='btn btn-success' id="bt2">Não</button>
+	      	</center>
+	        
+	 
+	        
+	     
+	      
+	    	
+	    </div>
+  	</section>
+
+  	<section id="carregamento" style="display: none;">
+  		<div class="container">
+  			<p id="txtc" style="font-size: 1.4rem;line-height: 1.8rem;font-weight: 400;text-align: center;"> 
+	      		Enviando suas respostas...
+	      	</p>
+  			<center>
+  				<img src="loading.gif" class="img-fluid mx-auto">
+  			</center>
+  			<p id="txtc2" style="font-size: 1.4rem;line-height: 1.8rem;font-weight: 400;text-align: center;"> 
+	      	.
+	      	</p>
+  			<center>
+  		</div>
+  		
+  	</section>
+
+
+  	<section id="final" style="display: none;">
+  		<div class="container div28">
+  			<h1 style="font-size: 2.7rem;color:#07c453;text-align: center;">Parabéns!</h1>
+  			<p style="font-size: 1.7rem;line-height: 1.8rem;font-weight: 400;text-align: center;"> 
+	      		Sua vaga foi reservada
+	      	</p>
+	      	<p style="font-size: 1.3rem;line-height: 1.8rem;text-align: center;"> 
+	      		Agora leia com atenção:
+	      	</p>
+
+	      	<p style="font-size: 1.1rem;line-height: 1.8rem;text-align: center;"> 
+	      		Você reservou uma vaga para aproveitar uma oportunidade única por tempo limitado!
+	      	</p>
+
+	      	<p style="font-size: 1.1rem;line-height: 1.8rem;text-align: center;"> 
+	      		Mas ainda não acabou...
+	      	</p>
+
+	      	<p style="font-size: 1.1rem;line-height: 1.8rem;text-align: center;"> 
+	      		Se você se compromete a ver o vídeo até o final, clique no botão abaixo para prosseguir até a apresentação.
+	      	</p>
+
+
+	      	<center>
+	      		<a style="font-weight: bold" href="https://go.perfectpay.com.br/PPU38CKAA17?src=google" class='btn btn-success' id="">EU CONCORDO!</a>
+	    	</center>
+
+  			
+  			<center>
+  		</div>
+  		
+  	</section>
+
+
+
+  	<div style="font-size: 1.1rem;margin-top: 25px;font-weight: 400;text-align: center;" class="container div28">
+		<p>© 2021 – Todos os direitos reservados. Este site não faz parte nem é endossado pelo Facebook. Facebook é uma marca comercial da Facebook, Inc.
+			</p>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script type="text/javascript">
+    
+  		var te = 1;
+
+  		function esconder(id) {
+  			var x = document.getElementById(id);
+  			if (x.style.display === "none") {
+   				x.style.display = "block";
+  			} else {
+  	  			x.style.display = "none";
+  			}
+		}
+    
+
+      	function modifyText(t) {
+        	te++;
+
+        	var query = location.search.slice(1);
+        
+        
+      		if (t==1) {
+        		document.getElementById("txt").innerHTML = "Você tem a mente aberta para novos investimentos?";
+        		document.getElementById("titu").innerHTML = "Questão 2 de 4"
+        	}else if (t==2) {
+        		document.getElementById("txt").innerHTML = "Você sabia que hoje o mercado de trading esportivo vale $218.49 bilhões de dólares?";
+          		document.getElementById("titu").innerHTML = "Questão 3 de 4"
+        	}else if (t==3) {
+	        	document.getElementById("txt").innerHTML = "Você quer aprender a ter liberdade financeira e ter tempo livre para fazer o que te faz feliz?";
+	          	document.getElementById("titu").innerHTML = "Última Questão!";
+	          	document.getElementById("bt1").innerHTML = "Sim, quero!";
+	          	document.getElementById("bt2").innerHTML = "Não...";
+       		}else if (t==4) {
+
+        			setTimeout(
+  			function(){ 
+    			esconder("pergunta");
+    			esconder("carregamento");
+  			}, 1000);
+
+	    setTimeout(
+	      function(){ 
+	        document.getElementById("txtc").innerHTML="Calculando o resultado...";
+	        document.getElementById("txtc2").innerHTML="..";
+	        setTimeout(
+	          function(){ 
+	            document.getElementById("txtc").innerHTML="Finalizando o processo...";
+	            document.getElementById("txtc2").innerHTML="..."; 
+	            setTimeout(
+  				function(){ 
+    				esconder("carregamento");
+    				esconder("final");
+  				}, 2500);
+	          }, 2500
+	        );
+	      }, 2500
+	    );
+          
+        	}
+
+      
+      	}
+
+
+
+		
+
+
+
+  </script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>
